@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+//Problem 15 - Count Number in Matrix
+
+int CountNumberInMatrix(int arr[3][3], int Rows, int Cols, int Number)
+{
+    int Counter = 0;
+    for (int i = 0;i < Rows;i++)
+    {
+        for (int j = 0;j < Cols;j++)
+        {
+            if (arr[i][j] == Number)
+                Counter++;
+        }
+    }
+    return Counter;
+}
+void PrintMatrix(int arr[3][3], int Rows, int Cols)
+{
+    for (int i = 0;i < Rows;i++)
+    {
+        for (int j = 0;j < Cols;j++)
+        {
+            printf(" %02d    ", arr[i][j]);
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    //Problem 15 - Count Number in Matrix
+
+    int arr[3][3] = { {9,10,1},{0,9,9},{0,12,9} };
+    int Number;
+
+    cout << "The Matrix: \n";
+    PrintMatrix(arr, 3, 3);
+
+    cout << "\nPlease Enter a Search Number: ";
+    cin >> Number;
+
+    cout << "\nNumber " << Number << " count in Matrix is " << CountNumberInMatrix(arr, 3, 3, Number) << endl;
+}
