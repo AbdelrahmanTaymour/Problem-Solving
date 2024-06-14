@@ -1,0 +1,65 @@
+#pragma warning(disable : 4996)
+#include <iostream>
+#include <string>
+using namespace std;
+
+//Problem 13 - Date1 Less Than Date2
+
+short ReadDay()
+{
+	short Day;
+	cout << "\nPlease enter a Day? ";
+	cin >> Day;
+	return Day;
+}
+short ReadMonth()
+{
+	short Month;
+	cout << "\nPlease enter a Month? ";
+	cin >> Month;
+	return Month;
+}
+short ReadYear()
+{
+	short Year;
+	cout << "\nPlease enter a year? ";
+	cin >> Year;
+	return Year;
+}
+struct sDate
+{
+	short Day;
+	short Month;
+	short Year;
+};
+sDate ReadFullDate()
+{
+	sDate Date;
+	Date.Day = ReadDay();
+	Date.Month = ReadMonth();
+	Date.Year = ReadYear();
+	return Date;
+}
+bool isDate1LessThanDate2(sDate Date1, sDate Date2)
+{
+	return (Date1.Year < Date1.Year) ? true : (Date1.Month < Date2.Month) ? true : (Date1.Day < Date2.Day) ? true : false;
+}
+bool IsDate1BeforeDate2(sDate Date1, sDate Date2)
+{
+	//insturactor solution
+	return (Date1.Year < Date2.Year) ? true : ((Date1.Year == Date2.Year) ? (Date1.Month < Date2.Month ? true : (Date1.Month == Date2.Month ? Date1.Day < Date2.Day : false)) : false);
+}
+
+int main()
+{
+	//Problem 13 - Date1 Less Than Date2
+
+	sDate Date1 = ReadFullDate();
+	cout << endl;
+	sDate Date2 = ReadFullDate();
+
+	if (isDate1LessThanDate2(Date1, Date2))
+		cout << "\nYes, Date1 is less than Date2.\n";
+	else
+		cout << "\nNo, Date1 is not less than Date2.\n";
+}
