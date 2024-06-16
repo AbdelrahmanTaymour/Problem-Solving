@@ -10,7 +10,7 @@
 class clsRegisterScreen : protected clsScreen
 {
 private:
-	static bool _Register()
+	bool _Register()
 	{
 		system("cls");
 
