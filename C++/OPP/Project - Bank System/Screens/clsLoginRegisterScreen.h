@@ -19,7 +19,7 @@ public:
 		cout << "\n\t\t\t\t\t______________________________________\n\n";
 
 		cout << "\n\nEnter your Choice : ";
-		int Choice = clsInputValidate::ReadShortNumberBetween(1, 2,"Invalid Choice. Plase Enter [1] to Login or [2] for Register: ");
+		int Choice = clsInputValidate::ReadShortNumberBetween(1, 2,"Invalid Choice. Please Enter [1] to Login or [2] for Register: ");
 
 		if (Choice == 1)
 			return clsLoginScreen::ShowLoginScreen();
