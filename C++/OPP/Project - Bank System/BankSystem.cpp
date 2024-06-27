@@ -1,11 +1,11 @@
 #include <iostream>
-#include "clsLoginRegisterScreen.h"
+#include "clsLoginScreen.h"
 
 int main()
 {
     while (true)
     {
-        if (!clsLoginRegisterScreen::ShowLoginRegisterScreen())
+        if (!clsLoginScreen::ShowLoginScreen())
             break;
     }
    
