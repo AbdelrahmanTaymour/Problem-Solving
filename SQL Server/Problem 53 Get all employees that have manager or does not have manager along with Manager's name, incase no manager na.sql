@@ -8,7 +8,3 @@ SELECT        Employees.Name, Employees.ManagerID, Employees.Salary,
 END as ManagerName
 FROM            Employees Left JOIN
                          Employees AS Managers ON Employees.ManagerID = Managers.EmployeeID
-
-
-
-
